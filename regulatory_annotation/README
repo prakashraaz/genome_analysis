@@ -1,0 +1,11 @@
+#WM 12/22/2013
+# Calculate PWM scores for candidate transcription factors along scaffold 2503,
+# and identify candidates that are in the tail of the black lemur distribution,
+# where the blue-eyed black lemur allele has a lower PWM score,
+# where the blue-eyed black lemur allele is derived,
+# and that are within a certain distance of high-scoring PWMs for another TF.
+1) Use CalculatePWMScores.py (separately for each TF) to get PWM scores for all positions across the scaffold.
+2) Use TailOfPWMScores.R to identify sites with high binding scores in black lemur.
+3) Use TFBSCandidates.py (separately for each TF) to get a list of candidates in the tail with a lower score in blue-eyed.
+4) Use PolarizeTFBSCandidates.py to classify sites from the candidate list according to which species has the derived allele.
+5) Use AdjacentToOtherTFBS.R to determine which of the candidates for which the blue-eyed allele is derived are within a certain distance of potential binding sites for another TF.
